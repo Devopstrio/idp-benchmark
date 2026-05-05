@@ -2,19 +2,18 @@
 
 <img src="https://raw.githubusercontent.com/Devopstrio/.github/main/assets/Browser_logo.png" height="150" alt="IdP Benchmark Logo" />
 
-<h1>IdP Benchmark Platform</h1>
+<h1>IDP Benchmark</h1>
 
-<p><strong>The Institutional-Grade Quantitative Comparison and Selection Platform for Enterprise Identity Providers</strong></p>
+<p><strong>The Institutional-Grade Platform for Quantitative Comparison, Selection, and Developer Experience Benchmarking of Internal Developer Platforms.</strong></p>
 
-[![Standard: IAM--Benchmark](https://img.shields.io/badge/Standard-IAM--Benchmark-blue.svg?style=for-the-badge&labelColor=000000)]()
-[![Status: Production--Ready](https://img.shields.io/badge/Status-Production--Ready-indigo.svg?style=for-the-badge&labelColor=000000)]()
-[![Security: Risk--Audit](https://img.shields.io/badge/Security-Risk--Audit-teal.svg?style=for-the-badge&labelColor=000000)]()
-[![Metrics: Data--Driven](https://img.shields.io/badge/Metrics-Data--Driven-emerald.svg?style=for-the-badge&labelColor=000000)]()
+[![Standard: IDP-Excellence](https://img.shields.io/badge/Standard-IDP--Excellence-blue.svg?style=for-the-badge&labelColor=000000)]()
+[![Status: Production--Ready](https://img.shields.io/badge/Status-Production--Ready-emerald.svg?style=for-the-badge&labelColor=000000)]()
+[![Focus: Developer--Experience](https://img.shields.io/badge/Focus-Developer--Experience-indigo.svg?style=for-the-badge&labelColor=000000)]()
 
 <br/>
 
-> **"If you can't measure it, you can't secure it."** 
-> IdP Benchmark is a flagship platform designed to enable enterprises to evaluate, compare, and score Identity Providers (IdPs) across critical dimensions. From security capability to global performance latency, it provides the data-driven insights required for institutional identity selection.
+> **"If you can't measure it, you can't optimize it."** 
+> **IDP Benchmark** is an enterprise-grade platform designed to provide a secure, measurable, and highly automated foundation for global developer experience (DX) operations. It orchestrates the complex lifecycle of IDP evaluation—from DORA/SPACE metric ingestion and industry-wide comparison to self-service capability mapping and unified platform ROI governance.
 
 </div>
 
@@ -22,349 +21,263 @@
 
 ## 🏛️ Executive Summary
 
-The **IdP Benchmark Platform** is a specialized flagship solution designed for CIOs, CISOs, and Identity Architects. Selecting an Identity Provider is one of the most critical long-term infrastructure decisions an enterprise can make. Yet, these decisions are often based on marketing collateral rather than objective, quantitative data.
+Fragmented developer workflows and manual platform evaluations are strategic engineering liabilities; lack of centralized DX orchestration is a primary barrier to organizational platform engineering maturity. Organizations fail to achieve high developer velocity not because of a lack of tools, but because of fragmented benchmarking standards, lack of automated productivity validation, and an inability to orchestrate platform landing zones with operational precision.
 
-This platform provides a **Unified Benchmarking Engine**. It demonstrates how to orchestrate real-world workload simulations—such as high-volume authentication bursts and complex conditional access evaluations—using **FastAPI**, **React 18**, and **Analytics Workers**. By generating detailed **Maturity Scorecards**, **Cost Heatmaps**, and **Performance Trendlines**, it enables organizations to select the right IdP for their specific multi-cloud and Zero Trust requirements.
-
----
-
-## 📉 The "Selection Complexity" Problem
-
-Enterprises evaluating IdPs face significant challenges:
-- **Feature Parity Confusion**: Difficulty distinguishing between "marketing features" and real-world operational maturity.
-- **Hidden Performance Gaps**: Latency differences between providers that impact global user experience.
-- **Complex Cost Models**: Predicting the total cost of ownership (TCO) including licensing, integration, and operational overhead.
-- **Zero Trust Readiness**: Measuring how effectively an IdP supports modern security principles like "Continuous Access Evaluation" (CAE).
+This platform provides the **DX Intelligence Plane**. It implements a complete **Enterprise Benchmark-as-Code Framework**, enabling Platform and Engineering teams to manage global developer productivity as first-class citizens. By automating the identification of workflow bottlenecks through real-time telemetry analysis and orchestrating the comparison against industry-standard maturity models, we ensure that every organizational platform—from core infrastructure portals to application-specific developer hubs—is measured by default, audited for history, and strictly aligned with institutional DX frameworks.
 
 ---
 
-## 🚀 Strategic Drivers & Business Outcomes
+## 📐 Architecture Storytelling: Principal Reference Models
 
-### 🎯 Strategic Drivers
-- **Standardized Vendor Evaluation**: Moving from subjective assessment to objective, data-driven scoring.
-- **Optimization of Multi-Cloud IAM**: Benchmarking how well different IdPs integrate with AWS, Azure, and GCP.
-- **Procurement Acceleration**: Providing procurement teams with standardized risk and capability reports.
+### 1. Principal Architecture: Global IDP & Developer Experience Intelligence Plane
+This diagram illustrates the end-to-end flow from multi-source telemetry ingestion (Git/Jira/CI) and metric evaluation to industry comparison, ROI calculation, and institutional DX auditing.
 
-### 💰 Business Outcomes
-- **Optimized TCO**: Identifying the most cost-efficient IdP based on specific enterprise usage patterns.
-- **Improved UX**: Selecting providers with the lowest global authentication and token issuance latency.
-- **Enhanced Security Posture**: Prioritizing IdPs with the strongest MFA, Zero Trust, and Compliance features.
-
----
-
-## 📐 Architecture Storytelling: 30+ Advanced Diagrams
-
-### 1. Executive Benchmarking Architecture
-*The orchestration of synthetic testing into vendor scorecards.*
-```mermaid
-graph TD
-    subgraph "Benchmark Platform"
-        Portal[Executive Dashboard]
-        Engine[Benchmark Engine]
-        Sim[Simulation Engine]
-        Analytics[Analytics Hub]
-        DB[(Results Ledger)]
-    end
-
-    subgraph "Target IdPs"
-        Entra[Entra ID]
-        Okta[Okta]
-        Ping[Ping Identity]
-        Auth0[Auth0]
-    end
-
-    Sim --> Entra
-    Sim --> Okta
-    Sim --> Ping
-    Sim --> Auth0
-    Entra --> Analytics
-    Okta --> Analytics
-    Ping --> Analytics
-    Auth0 --> Analytics
-    Analytics --> DB
-    Portal --> DB
-```
-
-### 2. Multi-Cloud Test Topology
-*Measuring performance from different global regions.*
 ```mermaid
 graph LR
-    subgraph "Test Regions"
-        US[US East - AWS]
-        EU[EU West - Azure]
-        AS[Asia - GCP]
+    %% Subgraph Definitions
+    subgraph TelemetryIngress["Engineering & Workflow Ingress"]
+        direction TB
+        GitSourceControl["GitHub / GitLab / ADO"]
+        ProjectManagement["Jira / Linear / ClickUp"]
+        CICD_Pipelines["Actions / Jenkins / CircleCI"]
     end
-    subgraph "Benchmark HUB"
-        Collector[Results Aggregator]
+
+    subgraph IntelligenceEngine["DX Intelligence Hub"]
+        direction TB
+        API["FastAPI Benchmark Gateway"]
+        MetricEngine["DORA & SPACE Metric Hub"]
+        ComparisonOrch["Industry & Peer Compare Orch"]
+        ROI_Calculator["Value & ROI Realization Hub"]
     end
-    US --> Collector
-    EU --> Collector
-    AS --> Collector
-```
 
-### 3. Authentication Flow Benchmarking
-*The steps measured during a synthetic auth test.*
-```mermaid
-sequenceDiagram
-    participant Sim as Simulation Engine
-    participant IdP as Identity Provider
-    participant Timer as Performance Metrics
+    subgraph OperationsPlane["Distributed DX Fleet"]
+        direction TB
+        ProductivityNodes["Workflow Pattern Scanners"]
+        MaturityValidators["IDP Capability Mappers"]
+        BenchmarkingProxies["Developer Sentiment Proxies"]
+    end
 
-    Sim->>Timer: Start Latency T0
-    Sim->>IdP: Auth Request (OIDC)
-    IdP-->>Sim: MFA Challenge
-    Sim->>IdP: MFA Response
-    IdP-->>Sim: ID/Access Token
-    Sim->>Timer: End Latency T1
-    Timer->>DB: Record Total: T1-T0
-```
+    subgraph OperationsHub["Institutional DX Hub"]
+        direction TB
+        Scorecard["DX Maturity Scorecard"]
+        Analytics["Lead Time & Deployment Stats"]
+        Audit["Forensic DX Metadata Lake"]
+    end
 
-### 4. MFA Capability Benchmarking
-*Comparing the strength of available MFA methods.*
-```mermaid
-graph TD
-    MFA[MFA Benchmark] --> Phish[Phishing Resistant]
-    MFA --> Bio[Biometric]
-    MFA --> Push[Push Notif]
-    MFA --> OTP[SMS/OTP]
+    subgraph DevOps["Benchmark-as-Code Framework"]
+        direction TB
+        TF["Terraform Benchmark Modules"]
+        VelocityBot["Velocity Drop Validator"]
+        ChatOps["DX Improvement Hub"]
+    end
+
+    %% Flow Arrows
+    TelemetryIngress -->|1. Submit Telemetry| API
+    API -->|2. Evaluate Metrics| MetricEngine
+    MetricEngine -->|3. Identify Gaps| ComparisonOrch
+    ComparisonOrch -->|4. Calculate ROI| ROI_Calculator
     
-    Phish --> Score1[Score: 100]
-    Bio --> Score2[Score: 80]
-    Push --> Score3[Score: 60]
-    OTP --> Score4[Score: 20]
-```
-
-### 5. Conditional Access Benchmarking
-*Measuring the complexity and speed of policy evaluation.*
-```mermaid
-graph LR
-    Req[Auth Request] --> CA[Policy Engine]
-    CA -->|Rule 1: Location| CA
-    CA -->|Rule 2: Risk| CA
-    CA -->|Rule 3: Device| CA
-    CA --> Decision[Allow / Block]
-```
-
-### 6. Zero Trust Maturity Model
-*Mapping IdP capabilities to Zero Trust pillars.*
-```mermaid
-graph TD
-    ZT[Zero Trust Score] --> Auth[Continuous Auth]
-    ZT --> Context[Context Awareness]
-    ZT --> Least[Least Privilege]
+    ROI_Calculator -->|5. Execute Validation| OperationsPlane
+    OperationsPlane -->|6. Notify Status| ChatOps
+    API -->|7. Visualize Health| Scorecard
     
-    Auth --> Mat1[Maturity: High]
-    Context --> Mat2[Maturity: Medium]
-    Least --> Mat3[Maturity: Elite]
+    Scorecard -->|8. Track Velocity| Analytics
+    Scorecard -->|9. Record Metric| Audit
+    
+    TF -->|10. Provision Hub| IntelligenceEngine
+    VelocityBot -->|11. Inject Velocity Risk| MetricEngine
+    Audit -->|12. Improve IDP| ProductivityNodes
+
+    %% Styling
+    classDef ingress fill:#f5f5f5,stroke:#616161,stroke-width:2px;
+    classDef intel fill:#e8eaf6,stroke:#1a237e,stroke-width:2px;
+    classDef operations fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
+    classDef ops fill:#ede7f6,stroke:#311b92,stroke-width:2px;
+    classDef devops fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px;
+
+    class TelemetryIngress ingress;
+    class IntelligenceEngine intel;
+    class OperationsPlane operations;
+    class OperationsHub ops;
+    class DevOps devops;
 ```
 
-### 7. Cost Modeler Flow
-*Calculating the economic impact of IdP selection.*
+### 2. The IDP Benchmark Lifecycle Flow
+The continuous path of a developer experience benchmark from initial measurement (DORA/SPACE) and analysis to active industry comparison, optimization, and institutional forensic auditing.
+
 ```mermaid
 graph LR
-    Input[User Count / Apps] --> Model[Cost Algorithm]
-    Model --> License[License Cost]
-    Model --> Ops[Operational Cost]
-    Model --> Total[Projected TCO]
+    Measure["Measure (DORA/SPACE)"] --> Analyze["Analyze (Productivity)"]
+    Analyze --> Compare["Compare (Industry)"]
+    Compare --> Optimize["Optimize & Audit"]
 ```
 
-### 8. Directory Sync Performance
-*Benchmarking the speed of user object propagation.*
+### 3. Distributed Developer Experience Topology
+Strategically assessing IDP performance across global engineering geographic clusters and business units, providing a unified institutional view of global engineering health and platform maturity.
+
+```mermaid
+graph LR
+    EMEA["BU: EMEA Engineering"] -->|Benchmark| Hub["Unified DX Hub"]
+    APAC["BU: APAC Engineering"] -->|Benchmark| Hub
+    AMER["BU: AMER Engineering"] -->|Benchmark| Hub
+    Hub --- Logic["Global Productivity Engine"]
+```
+
+### 4. DORA & SPACE Metrics Integration Flow
+Executing complex logic for ingesting and correlating telemetry from Git, Jira, and CI/CD into a unified DX benchmark hub, ensuring every organizational workflow is measured by default.
+
 ```mermaid
 graph TD
-    Source[On-Prem AD] --> Sync[Sync Engine]
-    Sync --> Cloud[Cloud Directory]
-    Sync -->|Measure| Latency[Object Sync Latency]
+    Telemetry["Source Telemetry Event"] --> DORA["Metric: Lead Time / Freq"]
+    Telemetry --> SPACE["Metric: Satisfaction / Collab"]
+    Telemetry --> Custom["Metric: Institutional KPIs"]
+    DORA & SPACE & Custom -->|Evaluate| Report["PATH: DX Report"]
+    Report --- Estimate["DX Health Score"]
 ```
 
-### 9. API Throughput Testing
-*Measuring the limits of the IdP Management API.*
+### 5. Self-Service Capability Matrix Flow
+Automatically evaluating IDP maturity against critical self-service pillars—including infrastructure provisioning, service discovery, and governance—ensuring institutional platform agility.
+
 ```mermaid
 graph LR
-    Tester[API Load Tester] --> API[IdP Management API]
-    API -->|Metrics| Rate[Rate Limit / RPS]
+    Portal["Developer Portal"] -->|Apply| Guard["Capability Maturity Mapper"]
+    Guard -->|Violate| Alert["Self-Service Gap Alert"]
+    Guard -->|Pass| Verify["Status: Institutional IDP"]
+    Verify --- Audit["Platform Compliance Log"]
 ```
 
-### 10. Vendor Risk & Compliance Scoring
-*Aggregating certifications and security posture.*
+### 6. Platform ROI & Value Realization Flow
+Managing the lifecycle of an IDP investment, automatically calculating cost savings from reduced developer toil and productivity gains from faster lead times, ensuring zero-latency value reporting.
+
+```mermaid
+graph LR
+    Metric["DX Metric Improvement"] -->|Calculate| Saving["Toil Reduction Saving"]
+    Saving -->|Validate| Value["Institutional Value Realization"]
+    Value -->|Record| Audit["Financial Impact Ledger"]
+    Audit --- Monitor["Real-Time ROI Loop"]
+```
+
+### 7. Institutional DX Maturity Scorecard
+Grading organizational performance based on key indicators: Deployment Frequency, Lead Time for Changes, and Developer Satisfaction Index.
+
 ```mermaid
 graph TD
-    Cert[SOC2 / ISO] --> Score[Vendor Trust Score]
-    Audit[Audit Logs] --> Score
-    Hist[Uptime History] --> Score
+    Post["DX Health: 96%"] --> Risk["Velocity Gap: 4%"]
+    Post --- C1["Deployment Freq (98%)"]
+    Post --- C2["Lead Time (100%)"]
 ```
 
-### 11. Token Issuance Latency Model
-```mermaid
-graph LR
-    Req[Req] --> Proc[Processing]
-    Proc --> Sign[Signing]
-    Sign --> Iss[Issued]
-```
+### 8. Identity & RBAC for DX Governance
+Managing fine-grained access to benchmark schedules, productivity triggers, and audit logs between Platform Architects, Engineering Managers, and DX Researchers.
 
-### 12. Federation Handshake Flow (SAML)
-```mermaid
-sequenceDiagram
-    SP->>IdP: AuthN Request
-    IdP-->>SP: SAML Assertion
-```
-
-### 13. Failover Resilience Model
 ```mermaid
 graph TD
-    Active[Region A] -- Fail --> Passive[Region B]
-    Passive --> Recovery[Measure RTO]
+    Architect["Platform Architect"] --> Hub["Manage DX frameworks"]
+    Manager["Engineering Manager"] --> Exec["Execute team benchmarks"]
+    Researcher["DX Researcher"] --> Audit["Verify Productivity Proofs"]
 ```
 
-### 14. SLA Compliance scoring
+### 9. IaC Deployment: Benchmark-as-Code Framework
+Using modular Terraform to deploy and manage the versioned distribution of the benchmark tracking hubs, analytics workers, and forensic metadata lakes.
+
 ```mermaid
 graph LR
-    Uptime[Live Uptime] --> SLA[Target 99.99%]
-    SLA --> Credit[Penalty/Credit Calc]
+    HCL["Infrastructure Code"] --> TF["Terraform Apply"]
+    TF --> Engine["Benchmark Control Plane"]
+    Engine --> Clusters["HA Validation Fleet"]
 ```
 
-### 15. Benchmark Replay Engine
+### 10. AIOps DX Anomaly & Productivity Validation Flow
+Using advanced analytics to identify sudden drops in developer velocity, suspicious workflow pattern changes, or unusual toil spikes that could result in institutional risk.
+
 ```mermaid
 graph LR
-    Log[Past Test] --> Replay[Execute Again]
-    Replay --> Delta[Performance Drift]
+    Workflow["Workflow Pattern"] --> Analyzer["Anomaly Detection Bot"]
+    Analyzer -->|Anomaly| Alert["DX Velocity Alert"]
+    Analyzer -->|Normal| Pass["Status Optimal"]
 ```
 
-### 16. OIDC Discovery Performance
-```mermaid
-graph TD
-    Client[Client] --> Config[.well-known]
-    Config --> Parse[Discovery Latency]
-```
+### 11. Metadata Lake for Forensic DX Audit
+Storing long-term records of every benchmark run, every metric change recorded, and every DX improvement action for institutional record-keeping, compliance auditing, and post-benchmark forensics.
 
-### 17. User Experience Score (UXI)
 ```mermaid
 graph LR
-    Lat[Latency] + Prompts[MFA Frequency] --> UX[UX Index]
+    Run["Benchmark Interaction Event"] --> Stream["Forensic Stream"]
+    Stream --> Lake["DX Metadata Lake"]
+    Lake --> Trends["Developer Velocity Trends"]
 ```
 
-### 18. Global Edge Latency Heatmap
-```mermaid
-graph TD
-    Loc[Global POPs] --> Measure[Ping Latency]
-    Measure --> Map[Visual Heatmap]
-```
+---
 
-### 19. Identity Data Ingestion Pipeline
-```mermaid
-graph LR
-    Logs[IdP Logs] --> ETL[Transform]
-    ETL --> SQL[(Benchmark DB)]
-```
+## 🏛️ Core DX Pillars
 
-### 20. RBAC Complexity Benchmark
-```mermaid
-graph TD
-    Roles[Role Count] --> Map[Mapping Logic]
-    Map --> Speed[Evaluation Speed]
-```
-
-### 21. Entra ID Integration Flow
-```mermaid
-graph LR
-    Client[Client] --> Entra[Entra ID Endpoint]
-```
-
-### 22. Okta Integration Flow
-```mermaid
-graph LR
-    Client[Client] --> Okta[Okta API/Auth]
-```
-
-### 23. Keycloak Self-Hosted Benchmark
-```mermaid
-graph TD
-    DB[Local DB] --> KC[Keycloak Pods]
-    KC --> Measure[Throughput]
-```
-
-### 24. AWS IAM Identity Center Bench
-```mermaid
-graph LR
-    User[User] --> AWS[AWS Auth]
-```
-
-### 25. Google Identity Bench
-```mermaid
-graph LR
-    User[User] --> Google[Google Workspace Auth]
-```
-
-### 26. Procurement ROI Model
-```mermaid
-graph TD
-    Cost[Price] --> Benefit[Security/UX Value]
-    Benefit --> ROI[ROI Score]
-```
-
-### 27. Feature Completeness Matrix
-```mermaid
-graph TD
-    F[Feature Set] --> Gap[Gap Analysis]
-```
-
-### 28. Incident Reporting Pipeline
-```mermaid
-graph LR
-    Error[Test Failed] --> Alert[Ops Alert]
-```
-
-### 29. Multi-Tenant Topology
-```mermaid
-graph LR
-    OrgA[Org A] --> Bench[Bench Platform]
-    OrgB[Org B] --> Bench
-```
-
-### 30. Strategic Roadmap Cycle
-```mermaid
-graph TD
-    Audit[Now] --> Select[Selection]
-    Select --> Optimize[Post-Migration]
-```
+1.  **Unified DX Coordination**: Maximizing velocity by centralizing all engineering benchmarking through a single institutional plane.
+2.  **Automated Productivity Validation**: Eliminating "toil-heavy" scenarios through proactive metric and workflow verification.
+3.  **Sequential Improvement Intelligence**: Ensuring zero-interruption engineering through dependency-aware multi-stage optimizations.
+4.  **Zero-Trust Metric Protection**: Automatically enforcing least-privilege data ingestion and rule evaluation across all DX tiers.
+5.  **Autonomous Benchmark Logic**: Guaranteeing reliability through automated industry-specific DX monitoring runbooks.
+6.  **Full DX Auditability**: Immutable recording of every benchmark result and improvement action for institutional forensics.
 
 ---
 
 ## 🛠️ Technical Stack & Implementation
 
-### Benchmarking Engine
-- **Language**: Python 3.11+
-- **Framework**: FastAPI
-- **Simulation**: Asyncio for high-concurrency auth simulations.
+### Benchmark Engine & APIs
+*   **Framework**: Python 3.11+ / FastAPI.
+*   **Metric Hub**: Custom Python-based logic for DORA, SPACE, and custom KPI calculation.
+*   **Integrations**: Native connectors for GitHub, GitLab, Jira, ADO, and common CI/CD tools.
+*   **Persistence**: PostgreSQL (Benchmark Ledger) and Redis (Live Metric State).
+*   **Auth Orchestrator**: Federated OIDC/SAML for least-privilege DX management access.
 
-### Frontend (Executive Dashboard)
-- **Framework**: React 18 / Vite
-- **Visuals**: Recharts (Radar charts for maturity scores).
-- **Icons**: Lucide Benchmark/Shield Icons.
+### Governance Dashboard (UI)
+*   **Framework**: React 18 / Vite.
+*   **Theme**: Dark, Blue, Slate (Modern high-fidelity engineering aesthetic).
+*   **Visualization**: D3.js for workflow topologies and Recharts for velocity analytics.
 
-### Infrastructure
-- **IaC**: Terraform (AWS RDS/EKS deployment).
-- **Monitoring**: Prometheus/Grafana (SLA and Latency tracking).
+### Infrastructure & DevOps
+*   **Runtime**: AWS EKS or Azure Kubernetes Service (AKS) for management plane.
+*   **Analytics Hub**: Managed Spark/Flink for high-velocity engineering telemetry correlation.
+*   **IaC**: Modular Terraform for deploying the benchmark landing zone and validation fleet.
+
+---
+
+## 🏗️ IaC Mapping (Module Structure)
+
+| Module | Purpose | Real Services |
+| :--- | :--- | :--- |
+| **`infrastructure/dx_hub`** | Central management plane | EKS, PostgreSQL, Redis |
+| **`infrastructure/workers`** | Distributed analytics fleet | K8s Workers, Cloud APIs |
+| **`infrastructure/connectors`** | Git & Jira Ingestion Hubs | Webhooks, Lambda |
+| **`infrastructure/auditing`** | Forensic DX sinks | S3, Athena, Quicksight |
 
 ---
 
 ## 🚀 Deployment Guide
 
-### Local Development
+### Local Principal Environment
 ```bash
-# Clone the repository
+# Clone the benchmark platform
 git clone https://github.com/devopstrio/idp-benchmark.git
 cd idp-benchmark
 
-# Setup environment
+# Configure environment
 cp .env.example .env
 
-# Launch platform
-make up
+# Launch the Benchmark stack
+make init
+
+# Trigger a mock telemetry ingestion and automated DX benchmarking simulation
+make simulate-benchmark
 ```
+
 Access the Benchmark Dashboard at `http://localhost:3000`.
 
 ---
 
 ## 📜 License
 Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+<div align="center">
+  <p>© 2026 Devopstrio. All rights reserved.</p>
+</div>
